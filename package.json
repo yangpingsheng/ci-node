@@ -7,6 +7,10 @@
   "scripts": {
     "format": "prettier --write {src,spec}/**/*.{ts,js,tsx,jsx}",
     "lint": "eslint --fix {src,spec}/**/*.{ts,js,tsx,jsx}",
+    "runTest": "cross-env TEST=1 jest",
+    "test:unit": "npm run runTest -- --testPathPattern=src --testPathIgnorePatterns=api",
+    "test:api": "npm run runTest -- api",
+    "test": "concurrently \"yarn run test:*\"",
     "start:dev": "nodemon"
   },
   "devDependencies": {
