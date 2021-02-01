@@ -1,6 +1,7 @@
 import express from 'express'
-import logger from 'morgan'
 import { addStrNum } from './math'
+
+const logger = require('morgan')
 
 const app = express()
 
