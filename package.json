@@ -5,6 +5,8 @@
   "author": "pish7 <949428190@qq.com>",
   "license": "MIT",
   "scripts": {
+    "format": "prettier --write {src,spec}/**/*.{ts,js,tsx,jsx}",
+    "lint": "eslint --fix {src,spec}/**/*.{ts,js,tsx,jsx}",
     "start:dev": "nodemon"
   },
   "devDependencies": {
